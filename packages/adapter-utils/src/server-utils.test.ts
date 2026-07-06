@@ -1474,7 +1474,7 @@ describe("applyPaperclipWorkspaceEnv", () => {
         workspaceSource: "project_primary",
         workspaceStrategy: "git_worktree",
         workspaceId: "workspace-1",
-        workspaceRepoUrl: "https://github.com/paperclipai/paperclip.git",
+        workspaceRepoUrl: "https://github.com/getpaperclipai/paperclip.git",
         workspaceRepoRef: "main",
         workspaceBranch: "feature/test",
         workspaceWorktreePath: "/tmp/worktree",
@@ -1487,7 +1487,7 @@ describe("applyPaperclipWorkspaceEnv", () => {
       PAPERCLIP_WORKSPACE_SOURCE: "project_primary",
       PAPERCLIP_WORKSPACE_STRATEGY: "git_worktree",
       PAPERCLIP_WORKSPACE_ID: "workspace-1",
-      PAPERCLIP_WORKSPACE_REPO_URL: "https://github.com/paperclipai/paperclip.git",
+      PAPERCLIP_WORKSPACE_REPO_URL: "https://github.com/getpaperclipai/paperclip.git",
       PAPERCLIP_WORKSPACE_REPO_REF: "main",
       PAPERCLIP_WORKSPACE_BRANCH: "feature/test",
       PAPERCLIP_WORKSPACE_WORKTREE_PATH: "/tmp/worktree",
@@ -1518,16 +1518,16 @@ describe("shapePaperclipWorkspaceEnvForExecution", () => {
         {
           workspaceId: "workspace-1",
           cwd: "/tmp/workspace",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
         {
           workspaceId: "workspace-2",
           cwd: "/tmp/other-workspace",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
         {
           workspaceId: "workspace-3",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
       ],
       executionTargetIsRemote: true,
@@ -1541,15 +1541,15 @@ describe("shapePaperclipWorkspaceEnvForExecution", () => {
         {
           workspaceId: "workspace-1",
           cwd: "/remote/workspace",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
         {
           workspaceId: "workspace-2",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
         {
           workspaceId: "workspace-3",
-          repoUrl: "https://github.com/paperclipai/paperclip.git",
+          repoUrl: "https://github.com/getpaperclipai/paperclip.git",
         },
       ],
     });

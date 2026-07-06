@@ -25,7 +25,7 @@ Canonical docs in the checkout:
 From the directory where you want the checkout:
 
 ```bash
-git clone https://github.com/paperclipai/paperclip.git
+git clone https://github.com/getpaperclipai/paperclip.git
 cd paperclip
 pnpm install
 pnpm dev

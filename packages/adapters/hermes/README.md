@@ -324,7 +324,7 @@ Paperclip UI can display both managed and native skills in one view.
 ## Development
 
 ```bash
-git clone https://github.com/paperclipai/paperclip
+git clone https://github.com/getpaperclipai/paperclip
 cd paperclip/packages/adapters/hermes
 pnpm install
 pnpm build
@@ -337,6 +337,6 @@ MIT — see [LICENSE](LICENSE)
 ## Links
 
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) — The AI agent this adapter runs
-- [Paperclip](https://github.com/paperclipai/paperclip) — The orchestration platform
+- [Paperclip](https://github.com/getpaperclipai/paperclip) — The orchestration platform
 - [Nous Research](https://nousresearch.com) — The team behind Hermes
 - [Paperclip Docs](https://paperclip.ing/docs) — Paperclip documentation

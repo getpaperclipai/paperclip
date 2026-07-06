@@ -6,7 +6,7 @@ cd "$REPO_ROOT"
 
 WEBHOOK_URL="${DISCORD_WEBHOOK_URL:-}"
 DATE="${1:-$(date +%Y-%m-%d)}"
-REPO_URL="https://github.com/paperclipai/paperclip"
+REPO_URL="https://github.com/getpaperclipai/paperclip"
 
 if [[ -z "$WEBHOOK_URL" ]]; then
   echo "Error: DISCORD_WEBHOOK_URL env var is required" >&2

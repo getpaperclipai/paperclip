@@ -49,4 +49,4 @@ Before enabling an experimental feature:
 ## Related references
 
 - See the CLI caveat in [Control-Plane Commands](/cli/control-plane-commands).
-- See the repo CLI reference in [`doc/CLI.md`](https://github.com/paperclipai/paperclip/blob/master/doc/CLI.md) when working from the repository.
+- See the repo CLI reference in [`doc/CLI.md`](https://github.com/getpaperclipai/paperclip/blob/master/doc/CLI.md) when working from the repository.

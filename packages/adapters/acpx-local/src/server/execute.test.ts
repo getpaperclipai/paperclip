@@ -283,7 +283,7 @@ describe("acpx_local runtime skill isolation", () => {
             source: "project_primary",
             strategy: "git_worktree",
             workspaceId: "workspace-1",
-            repoUrl: "https://github.com/paperclipai/paperclip.git",
+            repoUrl: "https://github.com/getpaperclipai/paperclip.git",
             repoRef: "main",
             branchName: "feature/remote-acpx",
             worktreePath: workspaceDir,
