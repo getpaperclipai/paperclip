@@ -179,21 +179,6 @@ A change is done when all are true:
 4. Docs updated when behavior or commands change
 5. PR description follows the [PR template](.github/PULL_REQUEST_TEMPLATE.md) with all sections filled in (including Model Used)
 
-## 11. Fork-Specific: HenkDz/paperclip
-
-This is a fork of `paperclipai/paperclip` with QoL patches and a **built-in** Hermes adapter story on branch `feat/externalize-hermes-adapter` ([tree](https://github.com/HenkDz/paperclip/tree/feat/externalize-hermes-adapter)).
-
-### Branch Strategy
-
-- `feat/externalize-hermes-adapter` now ships `hermes_local` and `hermes_gateway` as built-in core adapters.
-- Older fork branches may still document plugin-only Hermes; treat this file as authoritative for the current branch.
-
-### Hermes (built-in)
-
-- `hermes_local` is available without Adapter manager installation and runs the local Hermes CLI.
-- `hermes_gateway` is available without Adapter manager installation and calls an already-running Hermes API server.
-- Operators may still install external Hermes packages through Adapter manager to override/shadow the built-ins.
-- Optional: `file:` entry in `~/.paperclip/adapter-plugins.json` remains useful for local development of override packages.
 
 ### Local Dev
 
