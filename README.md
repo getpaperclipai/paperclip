@@ -1,2 +1,2 @@
-feat(auth): support Google OAuth login for new users
 fix(auth): handle expired sessions without redirect loop
+fix(auth): prevent duplicate account creation during OAuth callback
