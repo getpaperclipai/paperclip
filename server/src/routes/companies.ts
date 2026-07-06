@@ -31,6 +31,7 @@ import {
 import type { StorageService } from "../storage/types.js";
 import { assertBoard, assertCompanyAccess, assertInstanceAdmin, getActorInfo } from "./authz.js";
 import { COMPANY_IMPORT_ROUTE_PATH } from "./company-import-paths.js";
+import { log_action } from "../services/action-log.js";
 
 export function companyRoutes(db: Db, storage?: StorageService) {
   const router = Router();
@@ -86,6 +87,7 @@ export function companyRoutes(db: Db, storage?: StorageService) {
 
   router.get("/", async (req, res) => {
     assertBoard(req);
+    log_action();
     const result = await svc.list();
     if (req.actor.source === "local_implicit" || req.actor.isInstanceAdmin) {
       res.json(result);
@@ -126,6 +128,7 @@ export function companyRoutes(db: Db, storage?: StorageService) {
   router.get("/:companyId", async (req, res) => {
     const companyId = req.params.companyId as string;
     assertCompanyAccess(req, companyId);
+    log_action();
     // Allow agents (CEO) to read their own company; board always allowed
     if (req.actor.type !== "agent") {
       assertBoard(req);
@@ -296,6 +299,7 @@ export function companyRoutes(db: Db, storage?: StorageService) {
 
   router.post("/", validate(createCompanySchema), async (req, res) => {
     assertBoard(req);
+    log_action();
     if (!(req.actor.source === "local_implicit" || req.actor.isInstanceAdmin)) {
       throw forbidden("Instance admin required");
     }
