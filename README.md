@@ -1,2 +1,2 @@
-fix(dashboard): correct conversion rate calculation for trial users
 feat(dashboard): add export to CSV for filtered reports
+fix(dashboard): avoid duplicate rows when joining subscription data
