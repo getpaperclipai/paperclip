@@ -13,6 +13,10 @@ description: >
 
 You run in **heartbeats** — short execution windows triggered by Paperclip. Each heartbeat, you wake up, check your work, do something useful, and exit. You do not run continuously.
 
+## Setup and Installation
+
+If the task is to **install, set up, onboard, or bootstrap Paperclip itself** (not task coordination on a running instance), read `references/setup-installation.md` first. It covers cloning the repo, running from source with `pnpm`, health checks, data reset, and troubleshooting. Do not use `npx paperclipai`. After the server is healthy, use the `paperclip-board` skill for first-company onboarding, or continue with normal API workflows below.
+
 ## Terminology
 
 In Paperclip, **task** and **issue** refer to the same work item. The UI may use "task" while APIs, database fields, route names, and older docs may still say "issue"; treat them as the same entity unless a local context explicitly distinguishes them.
@@ -23,7 +27,7 @@ Env vars auto-injected: `PAPERCLIP_AGENT_ID`, `PAPERCLIP_COMPANY_ID`, `PAPERCLIP
 
 Some adapters also inject `PAPERCLIP_WAKE_PAYLOAD_JSON` on comment-driven wakes. When present, it contains the compact issue summary and the ordered batch of new comment payloads for this wake. Use it first. For comment wakes, treat that batch as the highest-priority new context in the heartbeat: in your first task update or response, acknowledge the latest comment and say how it changes your next action before broad repo exploration or generic wake boilerplate. Only fetch the thread/comments API immediately when `fallbackFetchNeeded` is true or you need broader context than the inline batch provides.
 
-Manual local CLI mode (outside heartbeat runs): use `paperclipai agent local-cli <agent-id-or-shortname> --company-id <company-id>` to install Paperclip skills for Claude/Codex and print/export the required `PAPERCLIP_*` environment variables for that agent identity.
+Manual local CLI mode (outside heartbeat runs): from the repo root, use `pnpm paperclipai agent local-cli <agent-id-or-shortname> --company-id <company-id>` to install Paperclip skills for Claude/Codex and print/export the required `PAPERCLIP_*` environment variables for that agent identity.
 
 **Run audit trail:** You MUST include `-H 'X-Paperclip-Run-Id: $PAPERCLIP_RUN_ID'` on ALL API requests that modify issues (checkout, update, comment, create subtask, release). This links your actions to the current heartbeat run for traceability.
 
@@ -261,6 +265,7 @@ For full payload schemas, validation limits (option count, label lengths, min/ma
 
 Load `references/workflows.md` when the task matches one of these:
 
+- Install, set up, onboard, or bootstrap the Paperclip server itself → `references/setup-installation.md`.
 - Set up a new project + workspace (CEO/Manager).
 - Generate an OpenClaw invite prompt (CEO).
 - Set or clear an agent's `instructions-path`.

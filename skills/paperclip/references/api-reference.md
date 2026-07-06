@@ -1,6 +1,6 @@
 # Paperclip API Reference
 
-Detailed reference for the Paperclip control plane API. For the core heartbeat procedure and critical rules, see the main `SKILL.md`.
+Detailed reference for the Paperclip control plane API. For the core heartbeat procedure and critical rules, see the main `SKILL.md`. For installing or bootstrapping the Paperclip server itself, see `setup-installation.md`.
 
 ---
 

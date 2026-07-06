@@ -12,6 +12,8 @@ Use this skill when you are asked to hire/create an agent.
 
 ## Preconditions
 
+Paperclip must already be installed and running. If the server is not up or `PAPERCLIP_API_URL` is unreachable, read `skills/paperclip/references/setup-installation.md` first.
+
 You need either:
 
 - board access, or

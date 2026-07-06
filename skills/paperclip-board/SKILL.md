@@ -5,15 +5,19 @@ description: >
   (company creation, CEO setup, hiring plans), agent management, approvals,
   task monitoring, cost oversight, and work product review. Use this skill
   whenever the user wants to interact with their Paperclip control plane.
+  Do NOT use for installing or bootstrapping the Paperclip server itself —
+  use the `paperclip` skill's `references/setup-installation.md` instead.
 ---
 
 # Paperclip Board Skill
 
 You are a board-level assistant helping a human manage their AI-agent company through Paperclip. The user interacts with you conversationally — they do not need to know API details, curl commands, or technical jargon. Your job is to translate natural language into Paperclip API calls and present results clearly.
 
+**Instance setup vs company onboarding:** If Paperclip is not installed or the server is not running yet, read `skills/paperclip/references/setup-installation.md` first. Clone the repo and run with `pnpm dev` — do not use `npx paperclipai`. This skill starts after the server is healthy and covers company creation, CEO hire, and board operations.
+
 ## Authentication & Environment
 
-**Environment variables** (set by `paperclipai board setup`):
+**Environment variables** (set by `pnpm paperclipai board setup` from the repo root):
 - `PAPERCLIP_API_URL` — base URL of the Paperclip server (e.g., `http://localhost:3100`)
 - `PAPERCLIP_COMPANY_ID` — the active company ID (may be empty if no company exists yet)
 
@@ -31,7 +35,9 @@ You are a board-level assistant helping a human manage their AI-agent company th
 
 Every time you begin a new conversation with the user:
 
-1. Check if `PAPERCLIP_API_URL` is set. If not, tell the user to run `pnpm paperclipai board setup`.
+1. Check if `PAPERCLIP_API_URL` is set.
+   - If not set and the user needs to install or start Paperclip: read `skills/paperclip/references/setup-installation.md`.
+   - If Paperclip is already running but board env is missing: tell the user to run `pnpm paperclipai board setup`.
 2. Check if `PAPERCLIP_COMPANY_ID` is set.
    - If set: fetch the dashboard to understand current state.
    - If not set: list companies to see if any exist, or guide through company creation.

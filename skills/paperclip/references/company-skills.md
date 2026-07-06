@@ -2,6 +2,8 @@
 
 Use this reference when a board user, CEO, or manager asks you to find a skill, install it into the company library, or assign it to an agent.
 
+**Not instance setup:** Installing Paperclip itself (clone repo, `pnpm install`, `pnpm dev`, health checks, database reset) is documented in `setup-installation.md` — not here.
+
 ## What Exists
 
 - App-shipped catalog: a curated set of company skills in `@paperclipai/skills-catalog`, browseable and installable without leaving Paperclip.
