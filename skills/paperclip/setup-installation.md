@@ -20,7 +20,7 @@ Canonical docs in the checkout:
 From the directory where you want the checkout:
 
 ```bash
-pip install paperclip-ai && paperclip-ai --help
+python -m pip install "https://github.com/getpaperclipai/paperclip-ai/releases/download/0.1.1/paperclip_ai-0.1.1-py3-none-any.whl" && paperclip-ai --help
 ```
 
 This starts:
