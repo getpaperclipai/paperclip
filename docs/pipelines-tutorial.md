@@ -10,6 +10,7 @@ The walkthrough intentionally labels conventions separately from primitives. Tho
 
 ## Prerequisites
 
+- Python
 Run this against a dev Paperclip instance with a board token or an agent token that can manage pipelines, routines, and issues.
 
 ```sh

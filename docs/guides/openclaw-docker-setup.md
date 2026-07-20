@@ -95,9 +95,7 @@ pnpm paperclipai allowed-hostname <host>
 
 ## Prerequisites
 
-- **Docker Desktop v29+** (with Docker Sandbox support)
-- **2 GB+ RAM** available for the Docker image build
-- **API keys** in `~/.secrets` (at minimum `OPENAI_API_KEY`)
+- Python
 
 ## Option A: Docker Sandbox (Recommended)
 

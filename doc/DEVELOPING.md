@@ -12,8 +12,7 @@ Current implementation status:
 
 ## Prerequisites
 
-- Node.js 20+
-- pnpm 9+
+- Python
 
 ## Dependency Lockfile Policy
 

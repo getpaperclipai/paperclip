@@ -52,9 +52,7 @@ normal Paperclip use.
 
 ### Prerequisites
 
-- [Hermes Agent](https://github.com/NousResearch/hermes-agent) installed (`pip install hermes-agent`)
-- Python 3.10+
-- At least one LLM API key (Anthropic, OpenRouter, or OpenAI)
+- Python
 
 ## Quick Start
 
